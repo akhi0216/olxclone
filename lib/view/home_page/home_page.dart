@@ -10,6 +10,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<Map> categories = [
+    {"image": "assets/images/passenger car front view.png", "title": "CARS"},
+    {"image": "assets/images/house.png", "title": "PROPERTIES"},
+    {
+      "image": "assets/images/mobile store with grocery items.png",
+      "title": "MOBILES"
+    },
+    {"image": "assets/images/travel suitcase.png", "title": "JOBS"},
+    {"image": "assets/images/furniture.png", "title": "FURNITURES"},
+    {"image": "assets/images/bikes.png", "title": "BIKES"},
+  ];
   // final locname_cntrl = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -96,11 +107,33 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             // 4th
+            // Container(
+            //   height: 100,
+            //   decoration: BoxDecoration(
+            //       image: DecorationImage(
+            //           image: NetworkImage("assets/images/propertieshome.png"))),
+            // ),
             Container(
               height: 100,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: NetworkImage("assets/images/propertieshome.png"))),
+              child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => Column(
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image:
+                                        AssetImage(categories[index]["image"]),
+                                    fit: BoxFit.fill)),
+                          ),
+                          SizedBox(height: 5),
+                          Text(categories[index]["title"])
+                        ],
+                      ),
+                  separatorBuilder: (context, index) => SizedBox(width: 50),
+                  itemCount: categories.length),
             ),
             // 5th
             Row(
@@ -123,11 +156,11 @@ class _HomePageState extends State<HomePage> {
               child: GridView.builder(
                 itemCount: griddetails.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
+                    crossAxisCount: 2, mainAxisSpacing: 7, crossAxisSpacing: 5),
                 itemBuilder: (context, index) => Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                      border: Border.all(width: 2, color: Colors.black)),
+                      border: Border.all(width: 2, color: Colors.grey)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

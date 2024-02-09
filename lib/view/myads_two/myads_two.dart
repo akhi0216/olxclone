@@ -13,16 +13,32 @@ class _MyadsTwoState extends State<MyadsTwo> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset("assets/images/SVector.png"),
+        Center(
+          child: Stack(
+            children: [
+              Container(
+                height: 250,
+                width: 500,
+                child: Image.asset("assets/images/Vector.png"),
+              ),
+              Positioned(
+                  right: 110,
+                  bottom: 80,
+                  child: Container(
+                    child: Image.asset("assets/images/Vector (1).png"),
+                  ))
+            ],
+          ),
+        ),
         Text(
-          "you havent listed anything yet",
+          "you havent liked anything yet",
           style: TextStyle(color: Colors.black, fontSize: 20),
         ),
         SizedBox(
           height: 5,
         ),
         Text(
-          "let go of what you dont use anymore",
+          "collect all things you like in one place",
           style: TextStyle(color: Colors.grey),
         ),
         SizedBox(
@@ -38,7 +54,7 @@ class _MyadsTwoState extends State<MyadsTwo> {
           ),
           child: Center(
             child: Text(
-              "post",
+              "Discover",
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),

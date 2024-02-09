@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olxclone/view/addbutton_page/addbutton_page.dart';
 import 'package:olxclone/view/bottom_navigation/bottom_navigation.dart';
 import 'package:olxclone/view/chat_main/chat_main.dart';
 import 'package:olxclone/view/enter_mobile/enter_mobile.dart';
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: SplashScreen(),
+      // home: AddbuttonPage(),
+      home: SplashScreen(),
       //  home: LoginPage()
       // home: HomePage(),
-      home: BottomNavigation(),
+      // home: BottomNavigation(),
       // home: EnterMobile(),
       // home: ChatMain(),
       // home: MyadsMain(),

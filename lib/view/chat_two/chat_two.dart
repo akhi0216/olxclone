@@ -96,7 +96,29 @@ class _ChatTwoState extends State<ChatTwo> {
               color: Colorconstants.mycustomgrey,
               fontWeight: FontWeight.bold,
               fontSize: 15),
-        )
+        ),
+        // SizedBox(
+        //   height: 100,
+        // ),
+        // InkWell(
+        //   child: Center(
+        //     child: Container(
+        //       padding: EdgeInsets.all(5),
+        //       width: 100,
+        //       decoration: BoxDecoration(
+        //           borderRadius: BorderRadius.circular(10),
+        //           color: Colorconstants.mycustomgreen),
+        //       // color: Colorconstants.mycustomgrey,
+        //       child: Center(
+        //         child: Text(
+        //           "start messaging",
+        //           style: TextStyle(color: Colors.white),
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        //   onTap: () {},
+        // )
       ],
     );
   }

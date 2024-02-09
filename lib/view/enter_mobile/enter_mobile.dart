@@ -1,7 +1,9 @@
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:olxclone/utilis/color_constants/color_constants.dart';
 import 'package:olxclone/view/bottom_navigation/bottom_navigation.dart';
 import 'package:olxclone/view/home_page/home_page.dart';
+import 'package:olxclone/view/name_page/name_page.dart';
 
 class EnterMobile extends StatefulWidget {
   const EnterMobile({super.key});
@@ -11,14 +13,16 @@ class EnterMobile extends StatefulWidget {
 }
 
 class _EnterMobileState extends State<EnterMobile> {
+  TextEditingController _phoneNumberController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
+      // backgroundColor: Colors.amber,
       appBar: AppBar(
         title: Text(
           "Login",
-          style: TextStyle(color: Colorconstants.mycustomblack),
+          style: TextStyle(
+              color: Colorconstants.mycustomblack, fontWeight: FontWeight.bold),
         ),
       ),
       body: Padding(
@@ -44,16 +48,41 @@ class _EnterMobileState extends State<EnterMobile> {
                   color: Colorconstants.mycustomblack,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 100),
+            // Row(
+            //   children: [
+            //     CountryCodePicker(),
+            //   ],
+            // ),
+            Row(
+              children: [
+                CountryCodePicker(),
+                SizedBox(width: 8),
+                Expanded(
+                  child: TextField(
+                    controller: _phoneNumberController,
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
+                      hintText: 'Enter your phone number',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 500),
             InkWell(
-              child: Container(
-                padding: EdgeInsets.all(5),
-                width: 300,
-                color: Colorconstants.mycustomgrey,
-                child: Center(
-                  child: Text(
-                    "next",
-                    style: TextStyle(color: Colors.white),
+              child: Center(
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  width: 300,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colorconstants.mycustomgreen),
+                  // color: Colorconstants.mycustomgrey,
+                  child: Center(
+                    child: Text(
+                      "next",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -61,7 +90,7 @@ class _EnterMobileState extends State<EnterMobile> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => BottomNavigation(),
+                      builder: (context) => NamePage(),
                     ));
               },
             )

@@ -1,3 +1,5 @@
+import 'dart:js_util';
+
 import 'package:flutter/material.dart';
 import 'package:olxclone/utilis/color_constants/color_constants.dart';
 
@@ -108,8 +110,121 @@ class _AccountPageState extends State<AccountPage> {
           Text(
             "we are built on trust.help one another to get to know each other better",
             style: TextStyle(
-                color: Colors.grey, fontSize: 8, fontWeight: FontWeight.bold),
-          )
+                color: Colors.grey, fontSize: 10, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+
+// list
+          Container(
+            height: 70,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  Icons.folder,
+                  color: Colors.black,
+                ),
+                Text(
+                  "My orders   ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+                Icon(
+                  Icons.navigate_next,
+                  color: Colors.black,
+                )
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.grey,
+          ),
+          // 2nd
+          Container(
+            height: 70,
+            child: Row(
+              // crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  Icons.settings,
+                  color: Colors.black,
+                ),
+                Text(
+                  "Settings             ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+                Icon(
+                  Icons.navigate_next,
+                  color: Colors.black,
+                )
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.grey,
+          ),
+          // 3rd
+          Container(
+            height: 70,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  Icons.support_agent,
+                  color: Colors.black,
+                ),
+                Text(
+                  "Help & support     ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+                Icon(
+                  Icons.navigate_next,
+                  color: Colors.black,
+                )
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.grey,
+          ),
+          // 4th
+          Container(
+            height: 70,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  Icons.public,
+                  color: Colors.black,
+                ),
+                Text(
+                  "Select language      ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+                Icon(
+                  Icons.navigate_next,
+                  color: Colors.black,
+                )
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.grey,
+          ),
         ],
       ),
     );

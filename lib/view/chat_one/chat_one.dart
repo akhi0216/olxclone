@@ -96,6 +96,28 @@ class _ChatOneState extends State<ChatOne> {
               color: Colorconstants.mycustomgrey,
               fontWeight: FontWeight.bold,
               fontSize: 15),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        InkWell(
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.all(5),
+              width: 200,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colorconstants.mycustomgreen),
+              // color: Colorconstants.mycustomgrey,
+              child: Center(
+                child: Text(
+                  "start messaging",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          ),
+          onTap: () {},
         )
       ],
     );
