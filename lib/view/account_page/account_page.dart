@@ -117,114 +117,96 @@ class _AccountPageState extends State<AccountPage> {
           ),
 
 // list
+
           Container(
-            height: 70,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            child: Column(
               children: [
-                Icon(
-                  Icons.folder,
-                  color: Colors.black,
+                ListTile(
+                  leading: Icon(
+                    Icons.folder,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    "My orders   ",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  trailing: Icon(
+                    Icons.navigate_next,
+                    color: Colors.black,
+                  ),
                 ),
-                Text(
-                  "My orders   ",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
+                Divider(
+                  color: Colors.grey,
                 ),
-                Icon(
-                  Icons.navigate_next,
-                  color: Colors.black,
-                )
+                // 2
+                ListTile(
+                  leading: Icon(
+                    Icons.settings,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    "settings",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  trailing: Icon(
+                    Icons.navigate_next,
+                    color: Colors.black,
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                // 3rd
+                ListTile(
+                  leading: Icon(
+                    Icons.support_agent,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    "Help&support",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  trailing: Icon(
+                    Icons.navigate_next,
+                    color: Colors.black,
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                // 4
+                ListTile(
+                  leading: Icon(
+                    Icons.public,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    "Help&support",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  trailing: Icon(
+                    Icons.navigate_next,
+                    color: Colors.black,
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
               ],
             ),
-          ),
-          Divider(
-            color: Colors.grey,
-          ),
-          // 2nd
-          Container(
-            height: 70,
-            child: Row(
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  Icons.settings,
-                  color: Colors.black,
-                ),
-                Text(
-                  "Settings             ",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                Icon(
-                  Icons.navigate_next,
-                  color: Colors.black,
-                )
-              ],
-            ),
-          ),
-          Divider(
-            color: Colors.grey,
-          ),
-          // 3rd
-          Container(
-            height: 70,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  Icons.support_agent,
-                  color: Colors.black,
-                ),
-                Text(
-                  "Help & support     ",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                Icon(
-                  Icons.navigate_next,
-                  color: Colors.black,
-                )
-              ],
-            ),
-          ),
-          Divider(
-            color: Colors.grey,
-          ),
-          // 4th
-          Container(
-            height: 70,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  Icons.public,
-                  color: Colors.black,
-                ),
-                Text(
-                  "Select language      ",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                Icon(
-                  Icons.navigate_next,
-                  color: Colors.black,
-                )
-              ],
-            ),
-          ),
-          Divider(
-            color: Colors.grey,
-          ),
+          )
         ],
       ),
     );

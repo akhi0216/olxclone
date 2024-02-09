@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                     title: Text("find cars,phones and more..."),
                   ),
                 ),
-                Icon(Icons.notifications)
+                // Icon(Icons.notifications)
               ],
             ),
             // third row
@@ -105,6 +105,9 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 15),
                 )
               ],
+            ),
+            SizedBox(
+              height: 7,
             ),
             // 4th
             // Container(
