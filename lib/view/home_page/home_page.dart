@@ -58,6 +58,7 @@ class _HomePageState extends State<HomePage> {
             // Row(
             //   children: [
             //     TextField(
+            // wrap with exand the row
             //       controller: locname_cntrl,
             //       decoration: InputDecoration(
             //           labelText: "find cars,phones and more...",
@@ -72,20 +73,50 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  height: 100,
-                  width: 300,
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.search,
-                      color: Colors.black,
-                    ),
-                    title: Text("find cars,phones and more..."),
+                Container(
+                  height: 60,
+                  width: 350,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colorconstants.mycustomblack, width: 2),
+                  ),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        Icons.search,
+                        color: Colorconstants.mycustomblack,
+                      ),
+                      Text(
+                        "find cars,phones and more...",
+                        style: TextStyle(color: Colorconstants.mycustomblack),
+                      ),
+                    ],
                   ),
                 ),
-                // Icon(Icons.notifications)
+                Icon(
+                  Icons.notifications,
+                  color: Colorconstants.mycustomblack,
+                )
               ],
             ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     SizedBox(
+            //       height: 100,
+            //       width: 300,
+            //       child: ListTile(
+            //         leading: Icon(
+            //           Icons.search,
+            //           color: Colors.black,
+            //         ),
+            //         title: Text("find cars,phones and more..."),
+            //       ),
+            //     ),
+            //     // Icon(Icons.notifications)
+            //   ],
+            // ),
             // third row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
