@@ -5,6 +5,7 @@ import 'package:olxclone/view/addbutton_page/addbutton_page.dart';
 import 'package:olxclone/view/chat_main/chat_main.dart';
 import 'package:olxclone/view/home_page/home_page.dart';
 import 'package:olxclone/view/myads_main/myads_main.dart';
+import 'package:olxclone/view/sell_page/sell_page.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -56,9 +57,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
         onPressed: () {
           Navigator.push(
               context,
-              MaterialPageRoute(
-                builder: (context) => AddbuttonPage(),
-              ));
+              MaterialPageRoute(builder: (context) => SellPage()
+                  // AddbuttonPage(),
+                  ));
         },
         child: Icon(
           Icons.add,

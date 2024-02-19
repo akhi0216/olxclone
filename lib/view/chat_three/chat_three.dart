@@ -90,12 +90,31 @@ class _ChatThreeState extends State<ChatThree> {
         SizedBox(
           height: 5,
         ),
-        Text(
-          "Be the first one to begin a coversation,",
-          style: TextStyle(
-              color: Colorconstants.mycustomgrey,
-              fontWeight: FontWeight.bold,
-              fontSize: 15),
+        // Text(
+        //   "As soon as someone sends you a message,it will start appearing here",
+        //   style: TextStyle(
+        //       color: Colorconstants.mycustomgrey,
+        //       fontWeight: FontWeight.bold,
+        //       fontSize: 15),
+        // ),
+        InkWell(
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.all(5),
+              width: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colorconstants.mycustomgreen),
+              // color: Colorconstants.mycustomgrey,
+              child: Center(
+                child: Text(
+                  "start selling",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          ),
+          onTap: () {},
         )
       ],
     );

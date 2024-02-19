@@ -2,6 +2,7 @@ import 'dart:js_util';
 
 import 'package:flutter/material.dart';
 import 'package:olxclone/utilis/color_constants/color_constants.dart';
+import 'package:olxclone/view/accountpage_two/accountpage_two.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
@@ -60,7 +61,13 @@ class _AccountPageState extends State<AccountPage> {
                       primary: Colorconstants.mycustomgreen,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AccountpageTwo(),
+                        ));
+                  },
                   child: Text(
                     "view and edit profile",
                     style: TextStyle(color: Colors.white),

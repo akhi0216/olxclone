@@ -1,0 +1,9 @@
+class Imageconstant {
+  static const String cars = "assets/images/car-rear.png";
+  static const String properties = "assets/images/apartment.png";
+  static const String mobiles = "assets/images/mobile-notch.png";
+  static const String jobs = "assets/images/briefcase-blank.png";
+  static const String bikes = "assets/images/biking-mountain.png";
+   static String morec = "assets/images/menu.png";
+  
+}

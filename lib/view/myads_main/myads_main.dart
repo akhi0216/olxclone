@@ -20,10 +20,10 @@ class _MyadsMainState extends State<MyadsMain> {
             leading: Column(
               children: [
                 Image.asset("assets/images/logo_green.png"),
-                Text(
-                  "MY ADS",
-                  style: TextStyle(color: Colorconstants.mycustomgreen),
-                )
+                // Text(
+                //   "MY ADS",
+                //   style: TextStyle(color: Colorconstants.mycustomgreen),
+                // )
               ],
             ),
             bottom: TabBar(labelColor: Colorconstants.mycustomgreen, tabs: [

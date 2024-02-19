@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:olxclone/utilis/color_constants/color_constants.dart';
+import 'package:olxclone/view/home_page/home_page.dart';
 
 class ChatTwo extends StatefulWidget {
   const ChatTwo({super.key});
@@ -97,28 +98,34 @@ class _ChatTwoState extends State<ChatTwo> {
               fontWeight: FontWeight.bold,
               fontSize: 15),
         ),
-        // SizedBox(
-        //   height: 100,
-        // ),
-        // InkWell(
-        //   child: Center(
-        //     child: Container(
-        //       padding: EdgeInsets.all(5),
-        //       width: 100,
-        //       decoration: BoxDecoration(
-        //           borderRadius: BorderRadius.circular(10),
-        //           color: Colorconstants.mycustomgreen),
-        //       // color: Colorconstants.mycustomgrey,
-        //       child: Center(
-        //         child: Text(
-        //           "start messaging",
-        //           style: TextStyle(color: Colors.white),
-        //         ),
-        //       ),
-        //     ),
-        //   ),
-        //   onTap: () {},
-        // )
+        SizedBox(
+          height: 100,
+        ),
+        InkWell(
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.all(5),
+              width: 150,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colorconstants.mycustomgreen),
+              // color: Colorconstants.mycustomgrey,
+              child: Center(
+                child: Text(
+                  "start messaging",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          ),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ));
+          },
+        )
       ],
     );
   }

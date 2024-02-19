@@ -100,25 +100,25 @@ class _ChatOneState extends State<ChatOne> {
         SizedBox(
           height: 30,
         ),
-        InkWell(
-          child: Center(
-            child: Container(
-              padding: EdgeInsets.all(5),
-              width: 200,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colorconstants.mycustomgreen),
-              // color: Colorconstants.mycustomgrey,
-              child: Center(
-                child: Text(
-                  "start messaging",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-          ),
-          onTap: () {},
-        )
+        // InkWell(
+        //   child: Center(
+        //     child: Container(
+        //       padding: EdgeInsets.all(5),
+        //       width: 200,
+        //       decoration: BoxDecoration(
+        //           borderRadius: BorderRadius.circular(10),
+        //           color: Colorconstants.mycustomgreen),
+        //       // color: Colorconstants.mycustomgrey,
+        //       child: Center(
+        //         child: Text(
+        //           "start messaging",
+        //           style: TextStyle(color: Colors.white),
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        //   onTap: () {},
+        // )
       ],
     );
   }
